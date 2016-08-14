@@ -25,6 +25,7 @@ namespace SushilaEnterprise.Models
         {
         }
 
+        public DbSet<Product> Product { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

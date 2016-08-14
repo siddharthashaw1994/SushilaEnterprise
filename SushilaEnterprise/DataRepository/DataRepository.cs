@@ -224,5 +224,11 @@ namespace SushilaEnterprise.DataRepository
         {
             _context.Dispose();
         }
+
+        public T GetById(int id)
+        {
+            var entity = _dbSet.Find(id);
+            return entity;
+        }
     }
 }
