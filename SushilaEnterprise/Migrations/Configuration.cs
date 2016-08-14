@@ -41,7 +41,7 @@ namespace SushilaEnterprise.Migrations
             //    var adminUser = manager.FindByName("admin@gmail.com");
 
             //    manager.AddToRoles(adminUser.Id, new string[] { "Admin" });
-            }
+            //}
         }
     }
 }
