@@ -13,6 +13,8 @@ namespace SushilaEnterprise
     {
         protected void Application_Start()
         {
+            var contain = AutofacConfig.RegisterDependancies();
+            DatabaseConfig.Initialize(contain);
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

@@ -16,7 +16,7 @@ namespace SushilaEnterprise
 {
     public class AutofacConfig
     {
-        public static IComponentContext RegisterDependancies(IAppBuilder app)
+        public static IComponentContext RegisterDependancies()
         {
             var builder = new ContainerBuilder();
 
@@ -26,7 +26,6 @@ namespace SushilaEnterprise
             builder.RegisterType<ApplicationUserManager>().AsSelf();
             builder.RegisterType<ApplicationSignInManager>().AsSelf();
             builder.Register<IAuthenticationManager>(c => HttpContext.Current.GetOwinContext().Authentication);
-            builder.Register<IDataProtectionProvider>(c => app.GetDataProtectionProvider());
 
             // register mvc controllers
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
