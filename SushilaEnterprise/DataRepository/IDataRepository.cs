@@ -9,6 +9,7 @@ namespace SushilaEnterprise.DataRepository
 {
     public interface IDataRepository<T>: IDisposable where T : class 
     {
+        T GetById(int id);
         /// <summary>
         /// Property gets the Entity count.
         /// </summary>
